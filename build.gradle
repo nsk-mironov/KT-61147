@@ -1,0 +1,21 @@
+plugins {
+  id "org.jetbrains.kotlin.jvm" version "1.9.0"
+  id "application"
+}
+
+group = "test"
+version = "1.0-SNAPSHOT"
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  implementation("com.google.code.gson:gson:2.8.9")
+  implementation("org.jetbrains.kotlin:kotlin-compiler:1.9.0") // works fine with 1.8.0
+  implementation("io.github.bonigarcia:webdrivermanager:5.4.1") // works when disabled
+}
+
+application {
+  mainClass = "crashme.CrashMeKt"
+}
